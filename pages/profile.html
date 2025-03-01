@@ -232,7 +232,7 @@
         let imageUrl = document.getElementById("profile-image").src;
 
         if (file) {
-            const storageRef = ref(storage, "avatars/" + file.name);
+            const storageRef = ref(storage, "/assets/img/" + file.name);
             await uploadBytes(storageRef, file);
             imageUrl = await getDownloadURL(storageRef);
         }
